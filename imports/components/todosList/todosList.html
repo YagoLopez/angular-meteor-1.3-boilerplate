@@ -1,9 +1,9 @@
 <header>
     <header>
-        <h1>Todo List {{ $ctrl.unfinishedTasks  }}</h1>
+        <h1>Demo: Lista de tareas colaborativa ( por terminar: {{ $ctrl.unfinishedTasks  }} )</h1>
 
         <form class="new-task" ng-submit="$ctrl.addTask($ctrl.newTask)" ng-show="$ctrl.currentUser">
-            <p><label>Ver sólo tareas por terminar <input type="checkbox" ng-model="$ctrl.hideCompleted"/></label></p>
+            <p><label>Ver sólo tareas inacabadas<input type="checkbox" ng-model="$ctrl.hideCompleted"/></label></p>
             <input ng-model="$ctrl.newTask" type="text" name="text" placeholder="Type to add new tasks"/>
             <input type="submit" value="submit">
         </form>
@@ -17,11 +17,11 @@
             <label>
             <input type="checkbox" ng-checked="task.checked" ng-click="$ctrl.setChecked(task)"
                    ng-show="$ctrl.currentUser._id == task.owner"/>
-            <span class="text">{{task.text}}</span>
+            <span class="text">Nombre de tarea: {{task.text}}</span>
             <button ng-click="$ctrl.removeTask(task)" class="delete"
                     ng-show="$ctrl.currentUser._id == task.owner">&times;</button>
             </label>
-            <div>Creador: {{ task.username }}</div>
+            <div>Tarea creada por: {{ task.username }}</div>
             <div>
                 <button ng-click="$ctrl.setPrivate(task)" ng-show="$ctrl.currentUser._id == task.owner">
                     {{ task.isPrivate == true ? "Hacer pública" : "Hacer privada" }}</button>
