@@ -10,7 +10,6 @@ if (Meteor.isServer){
             $or: [{isPrivate: false}, {owner: this.userId}]
         });
     });
-
 }
 
 Meteor.methods({
