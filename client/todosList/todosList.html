@@ -1,0 +1,40 @@
+<header>
+    <h1>Lista de tareas colaborativa (Demo)</h1>
+    <h3>Tareas por terminar: {{ unfinishedTasks  }}</h3>
+
+    <form class="new-task" ng-submit="addTask(newTask)" ng-show="currentUser">
+        <p><label>Ver sólo tareas inacabadas<input type="checkbox" ng-model="hideCompleted"/></label></p>
+        <input ng-model="newTask" type="text" name="text" placeholder="Añadir nueva tarea"/>
+        <input type="submit" value="submit">
+    </form>
+</header>
+
+
+<ul>
+    <li ng-repeat="task in tasks" ng-class="{'checked': task.checked}">
+        <div>
+            <label>
+                <input type="checkbox" ng-checked="task.checked" ng-click="setChecked(task)"
+                       ng-show="currentUser._id == task.owner"/>
+                <span class="text">Nombre de tarea: {{task.text}}</span>
+                <button ng-click="removeTask(task)" class="delete"
+                        ng-show="currentUser._id == task.owner">&times;</button>
+            </label>
+            <div>Tarea creada por: {{ task.username }}</div>
+            <div>
+                <button ng-click="setPrivate(task)" ng-show="currentUser._id == task.owner">
+                    {{ task.isPrivate == true ? "Hacer pública" : "Hacer privada" }}
+                </button>
+            </div>
+            <br/>
+            <!-- debug info -->
+            <div class="debug">_id: {{ task._id  }}</div>
+            <div class="debug">text: {{ task.text  }}</div>
+            <div class="debug">createdAt: {{ task.createdAt  }}</div>
+            <div class="debug">checked: {{ task.checked  }}</div>
+            <div class="debug">username: {{ task.username  }}</div>
+            <div class="debug">isPrivate: {{ task.isPrivate  }}</div>
+            <!-- /debug info -->
+        </div>
+    </li>
+</ul>

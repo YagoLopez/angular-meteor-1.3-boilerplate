@@ -2,7 +2,7 @@ import { Mongo } from 'meteor/mongo';
 import { Meteor } from 'meteor/meteor';
 import { check } from 'meteor/check';
 
-export const Tasks = new Mongo.Collection('tasks');
+Tasks = new Mongo.Collection('tasks');
 
 if (Meteor.isServer){
     Meteor.publish('tasks', function tasksPublication() {
@@ -10,8 +10,11 @@ if (Meteor.isServer){
             $or: [{isPrivate: false}, {owner: this.userId}]
         });
     });
+
 }
 
+// Los metodos de Meteor no deberian estar en /client ni en /server ya que deben ser accesibles tanto para el
+// servidor, como para el cliente
 Meteor.methods({
 
     addTask: function (text) {
@@ -31,6 +34,7 @@ Meteor.methods({
         }
     },
     removeTask: function(taskId) {
+        console.log('borrando tarea id', taskId);
         Tasks.remove(taskId);
     },
     setChecked: function(taskId, isChecked) {
