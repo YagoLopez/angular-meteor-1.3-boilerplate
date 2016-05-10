@@ -13,7 +13,7 @@ if (Meteor.isServer){
 
 }
 
-// Los metodos de Meteor no deberian estar en /client ni en /server ya que deben ser accesibles tanto para el
+// Los metodos de Meteor no deberian estar en los directorios /client ni /server ya que deben ser accesibles tanto para el
 // servidor, como para el cliente
 Meteor.methods({
 
