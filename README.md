@@ -16,5 +16,5 @@ It has a simplified architecture and use of imports. (See code)
 
 ## Requirements for running the application
 
-- Meteor framework
+- [Meteor](htp://www.meteor.com) framework
 - Angular package for Meteor
