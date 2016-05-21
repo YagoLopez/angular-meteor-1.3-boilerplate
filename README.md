@@ -1,11 +1,20 @@
 # meteor-1.3-boilerplate
-Startup Meteor 1.3 project.
+Angular-Meteor project as base for new projects. Clone this repository to start a new angular-meteor 1.3 project with an optimiced architecture.
 
-The demo consists in a "todo" list in wich users can work collaboratively creating tasks and seeing the tasks other users create in real time.
+This template project consists of a typical "todo" app in wich users can work collaboratively creating tasks and seeing the tasks other users create in real time.
 
-It embodies thus, user management and permissions management, so users must registrate and login to use the application.
+It implements users and permissions management, so users must registrate and login to use the application.
+
+It has a simplified architecture and use of imports. (See code)
 
 - Front-end: AngularJS
 - Server: Meteor and NodeJS
 - Database: MongoDB
-- Sockets for realtime updates implemented by means of Meteor framework
+- Realtime data: WebSockets
+- Javascript: EcmasScript 2015 standard (ES6)
+
+
+## Requirements for running the application
+
+- Meteor framework
+- Angular package for Meteor
