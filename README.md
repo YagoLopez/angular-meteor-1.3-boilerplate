@@ -1,4 +1,4 @@
-# meteor-1.3-boilerplate
+# angular-meteor-1.3-boilerplate
 Angular-Meteor project as base for new projects. Clone this repository to start a new angular-meteor 1.3 project with an optimiced architecture.
 
 This template project consists of a typical "todo" app in wich users can work collaboratively creating tasks and seeing the tasks other users create in real time.
