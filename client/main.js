@@ -1,6 +1,11 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
-import todosList from '/client/todosList/todosList.js';
-import '/client/startup/accounts-config.js';
+import { Accounts } from 'meteor/accounts-base'
 
-angular.module('simple-todos', [ angularMeteor, todosList.name, 'accounts.ui' ]);
+Accounts.ui.config({
+    passwordSignupFields: 'USERNAME_ONLY'
+});
+
+var app = angular.module('simple-todos', [ angularMeteor, 'accounts.ui' ]);
+
+export default app;

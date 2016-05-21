@@ -12,29 +12,22 @@
 
 <ul>
     <li ng-repeat="task in tasks" ng-class="{'checked': task.checked}">
-        <div>
-            <label>
-                <input type="checkbox" ng-checked="task.checked" ng-click="setChecked(task)"
-                       ng-show="currentUser._id == task.owner"/>
-                <span class="text">Nombre de tarea: {{task.text}}</span>
-                <button ng-click="removeTask(task)" class="delete"
-                        ng-show="currentUser._id == task.owner">&times;</button>
+        <fieldset>
+            <legend>Task</legend>
+            <div class="text">Descripción: {{ task.text }}</div>
+            <label ng-show="currentUser._id == task.owner">
+                Terminada / No terminada
+                <input type="checkbox" ng-checked="task.checked" ng-click="setChecked(task)"/>
             </label>
-            <div>Tarea creada por: {{ task.username }}</div>
+            <button ng-click="removeTask(task)" class="delete"
+                    ng-show="currentUser._id == task.owner">Delete</button>
+            <div>Creada por: {{ task.username }}</div>
             <div>
+                <div>Visibility: {{ task.isPrivate == true ? 'Private' : 'Public' }}</div>
                 <button ng-click="setPrivate(task)" ng-show="currentUser._id == task.owner">
-                    {{ task.isPrivate == true ? "Hacer pública" : "Hacer privada" }}
+                    {{ task.isPrivate == true ? 'Hacer pública' : 'Hacer privada' }}
                 </button>
             </div>
-            <br/>
-            <!-- debug info -->
-            <div class="debug">_id: {{ task._id  }}</div>
-            <div class="debug">text: {{ task.text  }}</div>
-            <div class="debug">createdAt: {{ task.createdAt  }}</div>
-            <div class="debug">checked: {{ task.checked  }}</div>
-            <div class="debug">username: {{ task.username  }}</div>
-            <div class="debug">isPrivate: {{ task.isPrivate  }}</div>
-            <!-- /debug info -->
-        </div>
+        </fieldset>
     </li>
 </ul>
