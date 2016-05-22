@@ -22,7 +22,6 @@ app.component('todosList',{
                 Meteor.call('removeTask', task._id);
             };
             $scope.setChecked = function(task) {
-                //task.checked = !task.checked;
                 Meteor.call('setChecked', task._id, task.checked)
             };
             $scope.setPrivate = function(task){
@@ -32,15 +31,12 @@ app.component('todosList',{
             $scope.helpers({
                 tasks(){
                     if( $scope.getReactively('hideCompleted')){
-                        console.log('tasks completed');
                         return Tasks.find({checked: {$ne: true}}, {sort: {createdAt:-1}});
                     } else{
-                        console.log('tasks incompleted', Tasks.find());
                         return Tasks.find( {}, {sort: {createdAt:-1}} )
                     }
                 },
                 currentUser(){
-                    console.log('currentUser: ', Meteor.user());
                     return Meteor.user()
                 },
                 unfinishedTasks () {
