@@ -2,7 +2,7 @@
     <h1>Lista de tareas colaborativa (Demo)</h1>
     <h3>Tareas por terminar: {{ unfinishedTasks  }}</h3>
 
-    <form class="new-task" ng-submit="addTask(newTask)" ng-show="currentUser">
+    <form class="new-task" ng-submit="$ctrl.addTask(newTask)" ng-show="currentUser">
         <p><label>Ver sólo tareas inacabadas<input type="checkbox" ng-model="hideCompleted"/></label></p>
         <input ng-model="newTask" type="text" name="text" placeholder="Añadir nueva tarea"/>
         <input type="submit" value="submit">

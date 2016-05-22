@@ -44,11 +44,8 @@ app.component('todosList',{
                 },
                 unfinishedTasks () {
                     return Tasks.find({checked: {$ne: true}}).count()
-                },
+                }
             })
         };
-
-
     }
-
-})
+});

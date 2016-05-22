@@ -2,19 +2,17 @@ import { Meteor } from 'meteor/meteor';
 import Tasks from '/imports/collections/tasks.js'
 import { check } from 'meteor/check';
 
-if (Meteor.isServer){
-    Meteor.publish('tasks', function tasksPublication() {
-        return Tasks.find({
-            $or: [{isPrivate: false}, {owner: this.userId}]
-        });
+Meteor.publish('tasks', function tasksPublication() {
+    return Tasks.find({
+        $or: [{isPrivate: false}, {owner: this.userId}]
     });
-}
+});
 
-// Meteor methods are sensible information. They shouln't be accesible to client, only to the server.
+// Meteor methods are sensible information. They shouln't be accesible to the client, only to the server.
 
 Meteor.methods({
 
-    addTask: function (text) {
+    addTask(text) {
         if (Meteor.userId()) {
             var task = {
                 text: text,
