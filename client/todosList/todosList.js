@@ -15,6 +15,7 @@ app.component('todosList',{
 
             $scope.addTask = function(text) {
                 Meteor.call('addTask', text);
+                console.log('adding task', text);
                 $scope.newTask = '';
             };
             $scope.removeTask = function(task){
