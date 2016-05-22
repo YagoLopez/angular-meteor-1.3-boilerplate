@@ -7,7 +7,7 @@ It implements users and permissions management, so users must registrate and log
 
 It has a simplified architecture and use of imports. (Compare the use of imports and angular dependencies in this code with the [official tutorial](https://www.meteor.com/tutorials/angular/creating-an-app))
 
-It uses Web Components to create reusable and structured code. The "todos list" is implemented by menans of a web component: "<todos-list></todos-list>"
+It uses Web Components to create reusable and structured code. The "todos list" is implemented by menans of a web component: `<todos-list></todos-list>`
 
 - Front-end: AngularJS 1.5.*
 - Server: Meteor and NodeJS
