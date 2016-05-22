@@ -8,7 +8,7 @@ app.component('todosList',{
     controller: class  {
 
         constructor($scope) {
-
+            'ngInject';
             $scope.subscribe('tasks');
 
             $scope.hideCompleted = false;

@@ -10,7 +10,7 @@ It has a simplified architecture and use of imports. (Compare the use of imports
 It uses Web Components to create reusable and structured code. The "todos list" is implemented by menans of a web component: `<todos-list></todos-list>`
 
 - Front-end: AngularJS 1.5.*
-- Server: Meteor and NodeJS
+- Server: Meteor 1.3 and NodeJS
 - Database: MongoDB
 - Realtime data: WebSockets
 - EcmasScript 2015 standard (ES6)
