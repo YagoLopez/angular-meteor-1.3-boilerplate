@@ -43,7 +43,7 @@ The application uses [Component Based Software Engineering](https://en.wikipedia
 
 The app is running [HERE](https://meteortestyls.herokuapp.com/) in a Heroku dyno, therefore it is not a forever-running process. After a period of time the process is shutdown and only when is visited by an user is launched again, so it can take some time to start.
 
-You can login as username: "usuario1@usuario1.com" or create a new account
+You can login as username: "usuario1" and password: "usuario1" or create a new account
 
 For testing the real time capabilities open another browser version in incognito mode. The changes made by one user in the data are inmediately propagated to the rest of users (for example if an user delete a public task). Keep in mind privated taks are only visible to his owners.
 
@@ -53,4 +53,4 @@ For testing the real time capabilities open another browser version in incognito
 ## Requirements for cloning and running the application
 
 - [Meteor](http://www.meteor.com) framework version  >= 1.3
-- Angular package for Meteor and other Meteor packages (included in this demo)
+- Angular package for Meteor and other Meteor packages (included)
