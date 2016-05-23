@@ -18,7 +18,7 @@ The application uses [Component Based Software Engineering](https://en.wikipedia
 
 ## Architecture:
 
-- **Client side code** are located in `/client/components/` directory (*.html templates, \*.js components*, etc.)
+- **Client side code** are located in `/client/components/` directory (*.html templates, *.js components*, etc.)
 
 - **Code shared by client and server** are located in the `/imports/` directory. (For example, *collections*)
 - **Server side code** are located in `/server/` directory (For example, *Meteor methods*)
@@ -36,7 +36,7 @@ The application uses [Component Based Software Engineering](https://en.wikipedia
 
 - Realtime data: WebSockets
 
-  ?
+
 
 
 ## Demo
