@@ -3,7 +3,7 @@ import Tasks from '/imports/collections/tasks.js'
 
 app.component('todosList',{
 
-    templateUrl: 'client/todosList/todosList.html',
+    templateUrl: 'client/components/todosList/todosList.html',
 
     controller: class  {
 
