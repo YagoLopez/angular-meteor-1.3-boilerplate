@@ -45,7 +45,7 @@ The app is running [HERE](https://meteortestyls.herokuapp.com/) in a Heroku dyno
 
 You can login as username: "usuario1" and password: "usuario1" or create a new account
 
-For testing the real time capabilities open another browser version in incognito mode. The changes made by one user in the data are inmediately propagated to the rest of users (for example if an user delete a public task). Keep in mind privated taks are only visible to his owners.
+For testing the real time capabilities open another browser version in incognito mode. Changes made by one user in the data are inmediately propagated to the rest of users (for example if an user delete a public task). Keep in mind privated taks are only visible to his owners.
 
 
 
