@@ -24,6 +24,8 @@ The application uses [Component Based Software Engineering](https://en.wikipedia
 - **Server side code** are located in `/server/` directory (For example, *Meteor methods*)
 
 
+([Here you can get a more complete project with this simplified architecture](https://github.com/YagoLopez/angular-meteor-socially))
+
 
 
 ## Stack
@@ -45,12 +47,14 @@ The app is running [HERE](https://meteortestyls.herokuapp.com/) in a Heroku dyno
 
 You can login as username: "usuario1" and password: "usuario1" or create a new account
 
-For testing the real time capabilities open another browser version in incognito mode. Changes made by one user in the data are inmediately propagated to the rest of users (for example if an user delete a public task). Keep in mind privated taks are only visible to his owners.
+>
+> For testing the real time capabilities, open another browser version in incognito mode. Changes made by one user in the data are inmediately propagated to the rest of users (for example if an user delete a public task). Keep in mind privated taks are only visible to his owners.
+>
 
 
 
 
 ## Requirements for cloning and running the application
 
-- [Meteor](http://www.meteor.com) framework version  >= 1.3
+- [Meteor](http://www.meteor.com) framework version  1.3+
 - Angular package for Meteor and other Meteor packages (included)
