@@ -30,13 +30,13 @@ The application uses [Component Based Software Engineering](https://en.wikipedia
 
 ## Stack
 
-- Front-end: AngularJS 1.5.5 and EcmasScript 2015 standard (ES6)
+- **Front-end**: AngularJS 1.5.5 and EcmasScript 2015 standard (ES6)
 
-- Server: Meteor 1.3 and NodeJS
+- **Back-end**: Meteor 1.3 and NodeJS
 
-- Database: MongoDB
+- **Database**: MongoDB
 
-- Realtime data: WebSockets
+- **Realtime data**: WebSockets
 
 
 
